@@ -332,9 +332,9 @@ mod tests {
 
 #[test]
 fn decode_script_asb_show() {
-    let data = std::fs::read("/Users/alphaly/lfpm/loli/root/system/script.asb").unwrap();
+    let data = std::fs::read("/path/to/asb").unwrap();
     let text = crate::decode_asb_to_string(&data).unwrap();
-    panic!("DECODED:\n{}", &text[..text.len().min(5000)]);
+    panic!("DECODED:\n{}", &text[..text.len().min(500000)]);
 }
 
 #[cfg(test)]
